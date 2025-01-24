@@ -1,10 +1,12 @@
 $(document).ready(function() {
-    function Avion(nombreCompañia, precioBase, numeroFilas, numeroColumnas) {
-        this.nombreCompañia = nombreCompañia;
-        this.precioBase = precioBase;
-        this.numeroFilas = numeroFilas;
-        this.numeroColumnas = numeroColumnas;
-        this.colorAsiento = [];
+    class Avion {
+        constructor(nombreCompañia, precioBase, numeroFilas, numeroColumnas) {
+            this.nombreCompañia = nombreCompañia;
+            this.precioBase = precioBase;
+            this.numeroFilas = numeroFilas;
+            this.numeroColumnas = numeroColumnas;
+            this.colorAsiento = [];
+        }
     }
 
     window.binter = new Avion("Binter", 120, 21, 8);
@@ -21,7 +23,7 @@ $(document).ready(function() {
 
         const totalFilas = avion.numeroFilas;
         const businessFilas = Math.ceil(totalFilas * 0.1);
-        const economicaFilas = Math.ceil((totalFilas - businessFilas) / 2);
+        const economicaFilas = Math.floor((totalFilas - businessFilas) / 2);
 
         const colorGuardado = localStorage.getItem(avion.nombreCompañia + "ColorAsiento");
         

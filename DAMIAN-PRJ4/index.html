@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres de Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Torres de Hanoi</h1>
+    <div id="mensaje"></div>
+    <div class="input-group">
+        <input type="text" id="nombreJugador" placeholder="Nombre">
+        <input type="text" id="numDiscos" placeholder="Discos (3)">
+        <button id="botonGuardarNombre">Iniciar</button>
+    </div>
+    <div id="areaJuego">
+        <div id="torre1" class="torre" data-indice="0"></div>
+        <div id="torre2" class="torre" data-indice="1"></div>
+        <div id="torre3" class="torre" data-indice="2"></div>
+    </div>
+    <div class="info-container">
+        <div id="contadorMovimientos">Movimientos: 0</div>
+        <div id="temporizador">Tiempo: 00:00</div>
+        <div id="mejorTiempo"></div>
+        <div id="movimientosMinimos">Movimientos mínimos: --</div>
+    </div>
+    <div class="input-group">
+        <button id="botonGuardar">Guardar</button>
+        <button id="botonCargar">Restaurar</button>
+        <button id="botonReiniciar">Reiniciar Juego</button>
+        <button id="botonPausar">Pausar</button>
+        <button id="botonReanudar">Reanudar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
