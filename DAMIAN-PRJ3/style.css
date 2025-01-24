@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #003580;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.airline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.airline-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.airline-card:hover {
+    transform: translateY(-5px);
+}
+
+.airline-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.airline-card p {
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #003580;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0 0.5rem;
+}
+
+button:hover {
+    background-color: #00254d;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#precio-total {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.asientos-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.seccion-asientos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.fila-asientos {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.seccion-titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.business-section {
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+.economica-section {
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.lowcost-section {
+    background-color: rgba(158, 158, 158, 0.1);
+}
+
+.asiento {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    max-width: calc(100% / 6);
+}
+
+.asiento:hover {
+    transform: scale(1.1);
+}
+
+.asiento.business { background-color: #ffa500; }
+.asiento.economica { background-color: #4caf50; }
+.asiento.lowcost { background-color: #9e9e9e; }
+.asiento.selected { background-color: #f44336; }
+.asiento.ocupado {
+    background-color: #f44336;
+    cursor: not-allowed;
+}

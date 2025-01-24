@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Reservar asientos - Ryanair</title>
+</head>
+<body>
+    <header>
+        <h1>Reservar asientos de Ryanair</h1>
+    </header>
+    <main class="container">
+        <div class="button-container">
+            <button id="guardar">Guardar asientos</button>
+            <button id="volver">Volver atrás</button>
+        </div>
+        <div id="precio-total">Precio Total: 0€</div>
+        <div id="asientos-container" class="asientos-horizontal"></div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+            tablaAsientos(ryanair);
+            actualizarPrecio();
+
+            $('#guardar').on('click', function() {
+                guardarAsientos('Ryanair');
+            });
+
+            $('#volver').on('click', function() {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
